@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CenzorComponent } from './cenzor/cenzor.component';
+import { UsersTaskComponent } from './users-task/users-task.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CenzorComponent
+    CenzorComponent,
+    UsersTaskComponent,
+    
   ],
   imports: [
     BrowserModule,
