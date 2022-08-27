@@ -1,0 +1,26 @@
+ <!-- Потрібно реалізувати функціонал як на відео AngularTaskList.
+ Count of task, а також інпут поле і кнопка add має бути в батьківській компоненті, 
+ а таблиця в дочірній компоненті.
+ Використовуємо декоратори @Input(), @Output(), EventEmmiter 
+ При добавлення нового таску генерується об’єкт з назвою таску і статусом зі значенням false. 
+ Цей об’єкт добавляється в масив тасок і рендериться на сторінці. -->
+<div class="task">
+    <h1 class="task__top">Plan your day! </h1>
+    <h1 class="task__top">User: {{user}}. Count of Task {{count}} </h1>
+    <section>
+        <input type="text" class="task__input" [(ngModel)]="pushName">
+        <input type="button" class="task__addBtn" value="Add"
+            (click)="addName()">
+    </section>
+
+    <app-child [newTask]="taskName"
+        (countLength)="getlength($event)"
+        (changeTask)="getName($event)">
+    </app-child>
+
+    <div *ngIf="save" class="task__change">
+        <input type="text" class="task__change__input" [(ngModel)]="getTask">
+        <input type="button" class="task__change__btn" value="save"
+            (click)="reName()">
+    </div>
+</div>
