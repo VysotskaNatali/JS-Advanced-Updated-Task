@@ -8,8 +8,11 @@ import { CenzorComponent } from './cenzor/cenzor.component';
 import { UsersTaskComponent } from './users-task/users-task.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { ChildComponent } from './task-list/child/child.component';
-
-
+import { PhoneBookComponent } from './phone-book/phone-book.component';
+import { SearchPipe } from './phone-book/search.pipe';
+import { SortFirstPipe } from './phone-book/sort-first.pipe';
+import { SortLastPipe } from './phone-book/sort-last.pipe';
+import { SortPhonePipe } from './phone-book/sort-phone.pipe';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,12 @@ import { ChildComponent } from './task-list/child/child.component';
     UsersTaskComponent,
     TaskListComponent,
     ChildComponent,
+    PhoneBookComponent,
+    SearchPipe,
+    SortFirstPipe,
+    SortLastPipe,
+    SortPhonePipe,
    
-  
-    
   ],
   imports: [
     BrowserModule,
